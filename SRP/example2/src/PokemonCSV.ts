@@ -1,9 +1,11 @@
 import Pokemon from "./Pokemon";
-import { readFile, writeFile } from 'fs'
+import * as path from 'path'
+import { readFile, writeFile, } from 'fs'
 
 export default class PokemonCSV {
     static append(pokemon: Pokemon) {
-        readFile('../pokemons.csv', (err,data) => {
+        const filePath = path.join(__dirname, '..', 'pokemons.csv')
+        readFile(filePath, (err,data) => {
             if (err) {
                 console.log('unable to read pokemons.csv')
             } else {
