@@ -2,13 +2,13 @@
 
 O _Single Responsability Principle_ (SRP), em português, Princípio da Responsabilidade Única, é um dos 5 princípios SOLID, princípios de programação orientada a objetos que ajudam a manter e estender o código do software. 
 
-O SRP diz que uma classe deve ter apenas uma responsabilidade, de uma forma prática, uma classe deve ter apenas uma razão para ser alterada.Diferentemente das _God Classes_, classes que implementam vários métodos e com várias responsabilidades, uma classe que respeita esse princípio deve ser focada em apenas um assunto.
+O SRP diz que uma classe deve ter apenas uma responsabilidade, de uma forma prática, uma classe deve ter apenas uma razão para ser alterada. Diferentemente das _God Classes_, classes que implementam vários métodos e com várias responsabilidades, uma classe que respeita esse princípio deve ser focada em apenas um assunto.
 
 A ilustração a baixo, extraída do artigo [The S.O.L.I.D Principles in Pictures](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898), demonstra a diferença de uma classe com várias responsabilidades de uma classe que respeita o Princípio da Responsabilidade Única.
 
 ![](https://miro.medium.com/max/1000/1*P3oONz9Da3Tc1w97fMV73Q.png)
 
-## Como aplicar
+## Como aplicar o princípio?
 
 Para melhorar o entendimento desse princípio, será usado um projeto de uma aplicação que busca dados de um pokémon utilizando uma API Rest ([PokéAPI](https://pokeapi.co/)).
 
@@ -125,7 +125,7 @@ export default class PokemonService {
 
 Repare também que esse princípio pode ser utilizado não só para classes, mas também para funções. Para obter a descrição do pokémon é necessário fazer a requisição em uma outra rota. No primeiro exemplo, essa requisição era implementado direto em ``fetchPokemon``, mas agora essa responsabilidade é do método ``getDescription``.
 
-As funções de imprimir no console e adicionar no arquivo, que antes fazia parte da classe [Pokemon](example1/Pokemon.ts) do primeiro exemplo, foram separadas em duas classes [PokemonPrinter](example2/src/PokemonPrinter.ts) e [PokemonCSV](example2/src/PokemonCSV.ts).
+As funções de imprimir no console e adicionar no arquivo CSV, que antes fazia parte da classe [Pokemon](example1/Pokemon.ts) do primeiro exemplo, foram separadas em duas classes [PokemonPrinter](example2/src/PokemonPrinter.ts) e [PokemonCSV](example2/src/PokemonCSV.ts).
 
 ```ts
 // src/PokemonPrinter.ts
