@@ -46,7 +46,7 @@ Done in 2.96s.
 
 E para adicionar no arquivo CSV, adicione ``csv`` no fim do comando
 ```
-yarn pokemon psyduck csv
+$ yarn pokemon psyduck csv
 
 ==== PSYDUCK ====
 type:  water
