@@ -4,9 +4,10 @@ Professor: Daniel Lucrédio <br>
 Autor: Daniel Lucio Masselani de Moura
 
 # NewsParser
+### An extensible news extractor
 
-An extensible news extractor in Java.
-
+Uma aplicação de linha de comando para extrair notícias em sites de notícias. 
+O projeto respeita o Princípio da responsabilidade única e o Princípio aberto-fechado.
 
 ## Como rodar
 
@@ -66,7 +67,7 @@ public class ParserRegister {
         parsers.put("globo", new GloboParser());
         parsers.put("ny-times", new NewYorkTimesParser());
         parsers.put("nerdbunker", new NerdBunkerParser());
-        parsers.put("example", new ExampleParser()); // Your new parser
+        parsers.put("example", new ExampleParser()); // -->> YOUR NEW PARSER <<--
 
         if (!parsers.containsKey(parserName)) {
             System.out.println(parserName + " is not available");
@@ -110,7 +111,7 @@ public class FunctionsRegister {
         // Register functions here
         parsers.put("print", new PrintFunction());
         parsers.put("csv", new CsvFunction());
-        parsers.put("example", new ExampleFunction()); // Your new function
+        parsers.put("example", new ExampleFunction()); // -->> YOUR NEW FUNCTION <<-
 
         if (!parsers.containsKey(functionName)) {
             System.out.println(functionName + " is not available");
