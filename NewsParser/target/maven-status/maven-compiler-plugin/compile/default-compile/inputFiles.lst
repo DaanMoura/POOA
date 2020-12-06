@@ -1,4 +1,11 @@
 /home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/parsers/Parser.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/parsers/NewYorkTimesParser.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/functions/CsvFunction.java
 /home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/models/News.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/functions/FunctionsRegister.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/parsers/NerdBunkerParser.java
 /home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/App.java
 /home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/parsers/GloboParser.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/parsers/ParserRegister.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/functions/Function.java
+/home/danielmoura/pooa/NewsParser/src/main/java/br/ufscar/dc/pooa/news_parser/functions/PrintFunction.java

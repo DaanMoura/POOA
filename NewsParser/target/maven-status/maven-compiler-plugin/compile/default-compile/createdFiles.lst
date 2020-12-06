@@ -1,1 +1,11 @@
+br/ufscar/dc/pooa/news_parser/parsers/Parser.class
+br/ufscar/dc/pooa/news_parser/functions/CsvFunction.class
+br/ufscar/dc/pooa/news_parser/functions/FunctionsRegister.class
+br/ufscar/dc/pooa/news_parser/parsers/GloboParser.class
 br/ufscar/dc/pooa/news_parser/models/News.class
+br/ufscar/dc/pooa/news_parser/parsers/NerdBunkerParser.class
+br/ufscar/dc/pooa/news_parser/parsers/NewYorkTimesParser.class
+br/ufscar/dc/pooa/news_parser/functions/PrintFunction.class
+br/ufscar/dc/pooa/news_parser/App.class
+br/ufscar/dc/pooa/news_parser/functions/Function.class
+br/ufscar/dc/pooa/news_parser/parsers/ParserRegister.class
