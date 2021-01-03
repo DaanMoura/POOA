@@ -1,0 +1,80 @@
+@startuml
+class SistemaMesario {
+    +iniciaNovaVotacao(): void
+}
+class Candidato {
+    +numero: number
+    +nome: string
+    +imagem: ImageBitmap
+}
+class Voto {
+    +horario: Date
+    +numero: number
+}
+abstract class DispositivoDeRegistro {
+    +{abstract} registraVoto(voto: Voto): void
+}
+abstract class DispositivoDeExibicao {
+    +{abstract} exibeCandidatos(candidatos: Candidato[]): void
+}
+abstract class DispositivoDeExibicaoComImagem {
+    +{abstract} exibeCandidatos(candidatos: Candidato[]): void
+}
+abstract class DispositivoDeEntrada {
+    +{abstract} recebeVoto(): Voto
+}
+abstract class DispositvoDeFeedback {
+    +{abstract} feedback(): void
+}
+class ArmazenamentoInterno implements DispositivoDeRegistro {
+    -_candidatos: Candidato[]
+    -_votos: Voto[]
+    +registraVoto(voto: Voto): void
+    +votos: Voto[]
+    +candidatos: Candidato[]
+}
+class ImpressoraTermica implements DispositivoDeRegistro {
+    +registraVoto(voto: Voto): void
+}
+class ServidorAuditoria implements DispositivoDeRegistro {
+    +registraVoto(voto: Voto): void
+}
+class ArmazenamentoExterno implements DispositivoDeRegistro {
+    -_votos: Voto[]
+    +registraVoto(voto: Voto): void
+}
+class Tela implements DispositivoDeExibicaoComImagem, DispositvoDeFeedback {
+    +exibeCandidatos(candidatos: Candidato[]): void
+    +feedback(): void
+}
+class DisplayBraille implements DispositivoDeExibicao {
+    +exibeCandidatos(candidatos: Candidato[]): void
+}
+class FoneDeOuvido implements DispositivoDeExibicao {
+    +exibeCandidatos(candidatos: Candidato[]): void
+}
+class TecladoFisico implements DispositivoDeEntrada {
+    +recebeVoto(): Voto
+}
+class TouchScreen implements DispositivoDeEntrada {
+    +recebeVoto(): Voto
+}
+class AltoFalante implements DispositvoDeFeedback {
+    +feedback(): void
+}
+class Urna {
+    -_zonaEleitoral: string
+    -_secao: String
+    +armazenamento: ArmazenamentoInterno
+    +mesario: SistemaMesario
+    +dispositivosDeExibicao: DispositivoDeExibicao[]
+    +dispositivosDeExibicaoComImagem: DispositivoDeExibicaoComImagem[]
+    +dispositivosDeEntrada: DispositivoDeEntrada[]
+    +dispositivosDeFeedback: DispositvoDeFeedback[]
+    +dispositivosDeRegistro: DispositivoDeRegistro[]
+    +zonaEleitoral: string
+    +secao: String
+    +exibeCandidatos(): void
+    +processaVoto(entrada: DispositivoDeEntrada): void
+}
+@enduml
